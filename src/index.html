@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,800&display=swap" rel="stylesheet">
+<body>
+
+<h1>Generate your SSH keys<br>Uploading To GitHub<br>Cloning A Repository</h1>
+<ol>
+    <li>
+        <strong>Generate your SSH Key</strong>
+        <ul>
+            <li><a href="https://git-scm.com/download/win">Install Git for Windows</a></li>
+            <li>Open Git Bash</li>
+            <li>
+                Type <strong>pwd</strong> and ensure that it looks like it is pointing to your user folder
+                <ul><li>NOTE: You can get to your user folder at any time with <strong>cd ~</strong></li></ul>
+            </li>
+            <li>Make the ".ssh" folder with: <strong>mkdir .ssh</strong></li>
+            <li>Change your directory with the cd command to .ssh: <strong>cd .ssh</strong></li>
+            <li>Run <strong>ssh-keygen.exe</strong> and leave all options as default (keep pressing enter)</li>
+        </ul>
+    </li>
+</ol>
+<ol>
+    <li>
+        <strong>Upload your key to github</strong>
+        <ul>
+            <li>Open up the file explorer and navigate to your user folder and then the .ssh folder. (C:\Users\YourUserFolder\.ssh)</li>
+            <li>Open id_rsa.pub in notepad.</li>
+            <li>Copy the entire contents of the file (CTRL + A and then CTRL + C)</li>
+            <li>
+                Log into your github account
+                <ul>
+                    <li>User Icon (top left)</li>
+                    <li>Settings</li>
+                    <li>SSH and GPG Keys</li>
+                    <li>Add Key</li>
+                    <li>Name it whatever you want, like Work Laptop or Personal Laptop. Whatever will let you know in the future that that key is for that computer.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ol>
+<ol>
+    <li>
+        <strong>Checkout from IntelliJ</strong>
+        <ul>
+            <li>Open IntelliJ</li>
+            <li>VCS get from version Control</li>
+            <li>Get the URL of the respository you want to clone: <a href="https://github.com/githubtest901026/test-repository">https://github.com/githubtest901026/test-repository</a></li>
+            <li>Click Clone or Download</li>
+            <li>Copy the Git SSH URL: <strong>git@github.com:githubtest901026/test-repository.git</strong></li>
+            <li>Click Clone and Select Yes for the project</li>
+            <li>Create Project from existing sources</li>
+            <li>Select Next on the rest of the options.</li>
+        </ul>
+    </li>
+</ol>
+
+</body>
+</html>
+<style>
+    body {
+        margin: 50px;
+        font-family: 'Merriweather Sans', sans-serif;
+    }
+    h1 {
+        text-align: center;
+    }
+    ol {
+        font-size: 20px;
+    }
+</style>
